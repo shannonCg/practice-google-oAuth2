@@ -1,0 +1,31 @@
+#spring properties
+spring:
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:postgresql://localhost:5432/authdb
+    username: postgres
+    password: 1qaz2wsx
+    type: org.apache.commons.dbcp2.BasicDataSource
+    dbcp2:
+      initial-size: 15
+      min-idle: 10
+      max-total: 100
+      test-on-borrow: true
+      validation-query: select 1
+      max-wait-millis: 5000
+      max-conn-lifetime-millis: 3600000
+  profiles:
+    active: hongyun
+#google oAuth2
+google:
+  client-id: 159240870861-faqnscee5la559jqtlvl3q333oe5f3di.apps.googleusercontent.com
+#logger
+logging:
+#  file: ./logs
+  level:
+    ROOT: INFO
+    com.syntrontech.oAuth2: DEBUG
+      
